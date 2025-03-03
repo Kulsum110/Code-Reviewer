@@ -1,0 +1,101 @@
+/* Reset global styles */
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+main .left,
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+}
+
+main .left {
+  background-color: #000000;
+  position: relative;
+}
+
+.left .code,
+.code pre,
+.code pre code {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  background-color: #0c0c0c;
+  color: #f8f8f2; /* Light text color for better contrast */
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  padding: 1rem;
+  white-space: pre-wrap; /* Ensures code is wrapped if it's too long */
+  word-wrap: break-word;
+}
+
+/* Styling for the Review button */
+main .left .review {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgb(219, 219, 255);
+  color: #000000;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Review Button Hover Effect */
+main .left .review:hover {
+  background-color: rgb(170, 170, 255);
+  transform: scale(1.05); /* Slight zoom effect when hovering */
+}
+
+/* Styling for the review section */
+main .right {
+  background-color: #343434;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  overflow: auto;
+  color: #f8f8f2; /* Ensure text in the review section is readable */
+  border-radius: 0.7rem;
+  word-wrap: break-word;
+}
+
+/* Styling for code blocks in the review */
+pre code {
+  background-color: #2d2d2d;
+  color: #f8f8f2; /* Light color for code */
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+pre {
+  background-color: #2d2d2d; /* Dark background for the code block */
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem 0;
+}
