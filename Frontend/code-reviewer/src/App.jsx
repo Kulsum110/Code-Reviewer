@@ -22,7 +22,7 @@ function App() {
     setLoading(true); // Start the loading process
 
     try {
-      const response = await axios.post('http://localhost:3000/api/review', { code });
+      const response = await axios.post('https://code-reviewer-backend-fz5l.onrender.com', { code });
       console.log('API Response:', response);  // Log the full response object
 
       // Check if the response contains the review property and is a string
